@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-accent: #32CD32;
+  --color-dark: #030C14;
+}
+
+/* Настройки для кастомного курсора и прокрутки */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #ffffff;
+  color: #030C14;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Кастомный премиальный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
+/* Отключаем стандартный курсор на десктопе для плавности кастомного */
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+  a, button, select, input, [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Стили выделения текста */
+::selection {
+  background-color: #32CD32;
+  color: #000000;
+}
+
+/* Классы интеграции Lenis Smooth Scroll */
+html.lenis {
+  height: auto;
+}
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis-stopped {
+  overflow: hidden;
+}
+.lenis-scrolling iframe {
+  pointer-events: none;
+}

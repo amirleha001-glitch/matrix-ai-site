@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { X, Check, Send } from "lucide-react";
 
 interface ProjectModalProps {
